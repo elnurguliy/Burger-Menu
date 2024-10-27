@@ -16,3 +16,27 @@ function toggleMenu() {
     }
 }
 
+
+/**
+ * Increases the font size of the entire page by 1%.
+ * Checks the current font size on the body and increases it incrementally.
+ */
+function increaseFontSize() {
+    const body = document.body;
+    const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+    body.style.fontSize = `${currentSize * 1.01}px`; 
+
+    // var newSize = (currentSize * 1.1) + "px"; // ett alternativ till ovan syntax
+
+}
+
+
+/**
+ * Decreases the font size of the entire page by 10%.
+ * Checks the current font size on the body and decreases it incrementally.
+ */
+function decreaseFontSize() {
+    const body = document.body;
+    const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+    body.style.fontSize = `${currentSize * 0.99}px`; // Minska med 1%
+}
